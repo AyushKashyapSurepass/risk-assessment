@@ -1,0 +1,14 @@
+runtime: python312
+app_engine_apis: true
+service: video-kyc
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+
+  - url: /assets
+    static_dir: dist/assets
+
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
