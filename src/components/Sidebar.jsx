@@ -6,7 +6,7 @@ import {useState} from 'react';
 import DashboardNav from "@/components/DashboardNav.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {setIsMinimized} from "@/Slices/DashBoardSlice.js";
-
+import spIcon from "@/assets/logo.png"
 export default function Sidebar() {
     // const [isMinimized, setIsMinimized] = useState(false);
     const [status, setStatus] = useState(false);
@@ -25,7 +25,7 @@ export default function Sidebar() {
     return (
         <nav
             className={cn(
-                `relative z-50 hidden fixed border-r transition h-screen flex-none  px-3 md:block`,
+                `relative z-50 hidden fixed bg-white border-r transition h-screen flex-none  px-3 md:block`,
                 status && 'duration-1000',
                 !isMinimized ? 'w-72 ' : 'w-[80px] delay-1000 transition',
             )}
@@ -42,7 +42,9 @@ export default function Sidebar() {
                     isMinimized ? 'justify-center ' : 'justify-between'
                 )}
             >
-                {!isMinimized && <h1 className="text-2xl font-bold">Logo</h1>}
+                {!isMinimized && <h1 className="text-2xl font-bold">
+                    {/*<img src={spIcon} className={'size-10/12 '} alt={'spIcon'}/>*/}
+                </h1>}
                 <ChevronsLeft
                     className={cn(
                         'size-8 cursor-pointer rounded-full bg-background text-foreground',

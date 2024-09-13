@@ -48,7 +48,7 @@ export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
                                         <item.icon className={`ml-2.5 size-5`} />
 
                                         {isMobileNav || (!isMinimized && !isMobileNav) ? (
-                                            <span className="mr-2 truncate">{item.title}</span>
+                                            <span className="mr-2 text-sm truncate">{item.title}</span>
                                         ) : (
                                             ''
                                         )}
@@ -58,7 +58,7 @@ export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
                                     align="center"
                                     side="right"
                                     sideOffset={8}
-                                    className={!isMinimized ? 'hidden' : 'inline-block bg-blue-700 text-white'}
+                                    className={!isMinimized ? 'hidden' : 'inline-block bg-blue-700 text-sm text-white'}
                                 >
                                     {item.title}
                                 </TooltipContent>
