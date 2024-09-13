@@ -4,12 +4,12 @@ import Charts from "@/pages/ScoreChart.jsx";
 import Login from "@/pages/LoginPage.jsx";
 // import {Toaster} from "@/components/ui/toaster"
 import {store} from "@/Store/Store.js";
+import UserList from "./pages/UserList";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import InitiateUser from "@/pages/InitiateUser.jsx";
 import Sidebar from "@/components/Sidebar.jsx";
 import Layout from "@/Layout.jsx";
 import {Provider} from "react-redux";
-
 const router = createBrowserRouter([
     {
         element: <Layout/>,
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 // element: <Charts />,
-                element: <InitiateUser />,
+                element: <UserList />,
                 exact: true,
             },
             {
