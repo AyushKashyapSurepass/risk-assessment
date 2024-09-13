@@ -3,25 +3,38 @@ import React, {useEffect, useMemo, useRef, useState} from "react";
 import Charts from "@/pages/ScoreChart.jsx";
 import Login from "@/pages/LoginPage.jsx";
 // import {Toaster} from "@/components/ui/toaster"
+import {store} from "@/Store/Store.js";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import InitiateUser from "@/pages/InitiateUser.jsx";
-const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <Login />,
-            exact: true,
-        },
-        {
-            path: "/Charts",
-            exact: true,
-            element: <InitiateUser />,
-        },
+import Sidebar from "@/components/Sidebar.jsx";
+import Layout from "@/Layout.jsx";
+import {Provider} from "react-redux";
 
-    ]);
+const router = createBrowserRouter([
+    {
+        element: <Layout/>,
+        children: [
+            {
+                path: "/",
+                // element: <Charts />,
+                element: <InitiateUser />,
+                exact: true,
+            },
+            {
+                path: "/Charts",
+                exact: true,
+                element: <Sidebar/>,
+                // element: <InitiateUser />,
+            },
+        ]
+    }
+]);
 export default function App() {
     return (
         <div className={'w-screen'}>
+            <Provider store={store}>
             <RouterProvider router={router}/>
+            </Provider>
         </div>
     )
 }
