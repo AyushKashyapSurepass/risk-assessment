@@ -1,22 +1,18 @@
+import {AlignJustify, FilePlus} from "lucide-react";
+
 export const navItems = [
     {
-        title: 'Dashboard',
+        title: 'Add',
         href: '/',
-        icon: 'dashboard',
-        label: 'Dashboard'
+        icon: FilePlus,
+        label: 'Add'
     },
     {
-        title: 'Students',
-        href: '/student',
-        icon: 'user',
-        label: 'Student'
+        title: 'User',
+        href: '/users',
+        icon: AlignJustify,
+        label: 'User'
     },
-    {
-        title: 'Login',
-        href: '/login',
-        icon: 'login',
-        label: 'Login'
-    }
 ];
 
 export const users = [

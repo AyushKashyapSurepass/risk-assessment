@@ -10,18 +10,19 @@ import {
 // import { usePathname } from '@/routes/hooks';
 import { Link } from 'react-router-dom';
 import {usePathname} from "@/hooks/use-pathname.jsx";
+import {useSelector} from "react-redux";
 
 export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
     const path = usePathname();
-    const { isMinimized } = useSidebar();
+    const {isMinimized} = useSelector(state => state.DashBoardSlice);
 
     if (!items?.length) {
         return null;
     }
 
-    console.log('isActive', isMobileNav, isMinimized);
-    console.log(items, setOpen, isMobileNav, "hello")
-
+    // console.log('isActive', isMobileNav, isMinimized);
+    // console.log(items, setOpen, isMobileNav, "hello")
+    console.log(path)
     return (
         <nav className="grid items-start gap-2">
             <TooltipProvider>
@@ -34,17 +35,17 @@ export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
                                     <Link
                                         to={item.disabled ? '/' : item.href}
                                         className={cn(
-                                            'flex items-center gap-2 overflow-hidden rounded-md py-2 text-sm font-medium hover:text-muted-foreground',
+                                            'flex items-center gap-2 gap-4 overflow-hidden rounded-md py-2 text-sm font-medium',
                                             path === item.href
-                                                ? 'bg-white text-black hover:text-black'
-                                                : 'transparent',
+                                                ? 'bg-blue-700 shadow-md text-white hover:text-white hover:bg-blue-600'
+                                                : '',
                                             item.disabled && 'cursor-not-allowed opacity-80'
                                         )}
                                         onClick={() => {
                                             if (setOpen) setOpen(false);
                                         }}
                                     >
-                                        {/*<Icon className={`ml-2.5 size-5`} />*/}
+                                        <item.icon className={`ml-2.5 size-5`} />
 
                                         {isMobileNav || (!isMinimized && !isMobileNav) ? (
                                             <span className="mr-2 truncate">{item.title}</span>
@@ -57,7 +58,7 @@ export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
                                     align="center"
                                     side="right"
                                     sideOffset={8}
-                                    className={!isMinimized ? 'hidden' : 'inline-block'}
+                                    className={!isMinimized ? 'hidden' : 'inline-block bg-blue-700 text-white'}
                                 >
                                     {item.title}
                                 </TooltipContent>

@@ -25,7 +25,7 @@ export default function Sidebar() {
     return (
         <nav
             className={cn(
-                `relative z-10 hidden fixed border-r transition h-screen flex-none  px-3 md:block`,
+                `relative z-50 hidden fixed border-r transition h-screen flex-none  px-3 md:block`,
                 status && 'duration-1000',
                 !isMinimized ? 'w-72 ' : 'w-[80px] delay-1000 transition',
             )}
