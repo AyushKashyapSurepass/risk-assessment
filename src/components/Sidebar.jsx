@@ -29,22 +29,18 @@ export default function Sidebar() {
                 status && 'duration-1000',
                 !isMinimized ? 'w-72 ' : 'w-[80px] delay-1000 transition',
             )}
-            // className={cn(
-            //     `relative z-10 hidden fixed border-r transition-all ease-in-out h-screen flex-none px-3 md:block`,
-            //     status && 'duration-1000',
-            //     !isMinimized ? 'w-72 duration-1000' : 'w-[80px] duration-1000'
-            // )}
+
 
         >
             <div
                 className={cn(
-                    'flex items-center px-0 py-5 md:px-2',
-                    isMinimized ? 'justify-center ' : 'justify-between'
+                    'flex items-center px-0 py-5 justify-between md:px-2',
+                    // isMinimized ? 'justify-center ' : 'justify-between'
                 )}
             >
-                {!isMinimized && <h1 className="text-2xl font-bold">
-                    {/*<img src={spIcon} className={'size-10/12 '} alt={'spIcon'}/>*/}
-                </h1>}
+                {/*{!isMinimized && <h1 className="text-2xl font-bold">*/}
+                {/*    <img src={spIcon} className={'size-8/12 '} alt={'spIcon'}/>*/}
+                {/*</h1>}*/}
                 <ChevronsLeft
                     className={cn(
                         'size-8 cursor-pointer rounded-full bg-background text-foreground',
