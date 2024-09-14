@@ -4,6 +4,7 @@ import Charts from "@/pages/ScoreChart.jsx";
 import Login from "@/pages/LoginPage.jsx";
 // import {Toaster} from "@/components/ui/toaster"
 import {store} from "@/Store/Store.js";
+import UserList from "./pages/UserList";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import InitiateUser from "@/pages/InitiateUser.jsx";
 import Sidebar from "@/components/Sidebar.jsx";
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
                 path: "/",
                 // element: <Charts />,
                 // element: <ClientQuestionaries />,
-                element: <InitiateUser />,
+                // element: <InitiateUser />,
+                element: <UserList />,
                 exact: true,
             },
             {

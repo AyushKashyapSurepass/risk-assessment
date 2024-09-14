@@ -7,9 +7,6 @@ export const rootReducer = combineSlices({
     DashBoardSlice
 })
 
-
-
-
 export const store = configureStore({
     reducer: rootReducer,
 })
