@@ -10,6 +10,8 @@ import InitiateUser from "@/pages/InitiateUser.jsx";
 import Sidebar from "@/components/Sidebar.jsx";
 import Layout from "@/Layout.jsx";
 import {Provider} from "react-redux";
+import ClientQuestionaries from "@/pages/ClientQuestionaries.jsx";
+
 const router = createBrowserRouter([
     {
         element: <Layout/>,
@@ -17,6 +19,8 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 // element: <Charts />,
+                // element: <ClientQuestionaries />,
+                // element: <InitiateUser />,
                 element: <UserList />,
                 exact: true,
             },
