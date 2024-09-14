@@ -29,6 +29,10 @@ const router = createBrowserRouter([
                 // element: <InitiateUser />,
             },
         ]
+    },
+    {
+        path: '/form',
+        element: <ClientQuestionaries />,
     }
 ]);
 export default function App() {

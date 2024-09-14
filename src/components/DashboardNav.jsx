@@ -38,7 +38,7 @@ export default function DashboardNav({ items, setOpen, isMobileNav = false }) {
                                             'flex items-center gap-2 gap-4 overflow-hidden rounded-md py-2 text-sm font-medium',
                                             path === item.href
                                                 ? 'bg-blue-700 shadow-md text-white hover:text-white hover:bg-blue-600'
-                                                : '',
+                                                : 'text-text_lite',
                                             item.disabled && 'cursor-not-allowed opacity-80'
                                         )}
                                         onClick={() => {

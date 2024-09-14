@@ -174,11 +174,12 @@ export default function ClientQuestionaries() {
         //         </div>
         //     </form>
         // </main>
-        <main className="px-6 py-8 space-y-6 min-h-screen w-full">
+        <main className="px-6 py-8 relative space-y-6 min-h-screen w-full">
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-blue-700 z-[-999]"></div>
             <header className="w-full mx-auto px-6 py-8">
                 <div className="flex flex-col gap-5 items-center justify-center">
-                    <div className="text-4xl font-bold text-[#333]">Security Questionnaires</div>
-                    <p className="mt-2 text-center max-w-xl text-lg text-[#666]">
+                    <div className="text-4xl font-bold text-white">Security Questionnaires</div>
+                    <p className="mt-2 text-center max-w-xl text-lg text-white">
                         We have prepared this comprehensive Securities Questionnaire to better understand your financial
                         situation, investment goals, and risk tolerance. Your thoughtful responses will help us:
                     </p>
@@ -192,25 +193,25 @@ export default function ClientQuestionaries() {
                     <form className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <Label htmlFor="name">Name</Label>
-                            <Input id="name" placeholder="Enter your name" />
+                            <Input id="name" placeholder="Enter your name"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" placeholder="Enter your email" type="email" />
+                            <Input id="email" placeholder="Enter your email" type="email"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="stock-ticker">Stock Ticker</Label>
-                            <Input id="stock-ticker" placeholder="Enter stock ticker" />
+                            <Input id="stock-ticker" placeholder="Enter stock ticker"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-amount">Investment Amount</Label>
-                            <Input id="investment-amount" placeholder="Enter investment amount" />
+                            <Input id="investment-amount" placeholder="Enter investment amount"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-horizon">Investment Horizon</Label>
                             <Select>
                                 <SelectTrigger id="investment-horizon">
-                                    <SelectValue placeholder="Select investment horizon" />
+                                    <SelectValue placeholder="Select investment horizon"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="short-term">Short-term</SelectItem>
@@ -223,7 +224,7 @@ export default function ClientQuestionaries() {
                             <Label htmlFor="risk-tolerance">Risk Tolerance</Label>
                             <Select>
                                 <SelectTrigger id="risk-tolerance">
-                                    <SelectValue placeholder="Select risk tolerance" />
+                                    <SelectValue placeholder="Select risk tolerance"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="low">Low</SelectItem>
@@ -234,17 +235,17 @@ export default function ClientQuestionaries() {
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="financial-goals">Financial Goals</Label>
-                            <Textarea id="financial-goals" placeholder="Enter your financial goals" />
+                            <Textarea id="financial-goals" placeholder="Enter your financial goals"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-strategy">Investment Strategy</Label>
-                            <Textarea id="investment-strategy" placeholder="Enter your investment strategy" />
+                            <Textarea id="investment-strategy" placeholder="Enter your investment strategy"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-experience">Investment Experience</Label>
                             <Select>
                                 <SelectTrigger id="investment-experience">
-                                    <SelectValue placeholder="Select investment experience" />
+                                    <SelectValue placeholder="Select investment experience"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="beginner">Beginner</SelectItem>
@@ -257,7 +258,7 @@ export default function ClientQuestionaries() {
                             <Label htmlFor="investment-time-frame">Investment Time Frame</Label>
                             <Select>
                                 <SelectTrigger id="investment-time-frame">
-                                    <SelectValue placeholder="Select investment time frame" />
+                                    <SelectValue placeholder="Select investment time frame"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="1-year">1 year</SelectItem>
@@ -269,17 +270,17 @@ export default function ClientQuestionaries() {
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-objectives">Investment Objectives</Label>
-                            <Textarea id="investment-objectives" placeholder="Enter your investment objectives" />
+                            <Textarea id="investment-objectives" placeholder="Enter your investment objectives"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-constraints">Investment Constraints</Label>
-                            <Textarea id="investment-constraints" placeholder="Enter your investment constraints" />
+                            <Textarea id="investment-constraints" placeholder="Enter your investment constraints"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="investment-horizon-2">Investment Horizon (2)</Label>
                             <Select>
                                 <SelectTrigger id="investment-horizon-2">
-                                    <SelectValue placeholder="Select investment horizon" />
+                                    <SelectValue placeholder="Select investment horizon"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="short-term">Short-term</SelectItem>
@@ -292,7 +293,7 @@ export default function ClientQuestionaries() {
                             <Label htmlFor="investment-risk-profile">Investment Risk Profile</Label>
                             <Select>
                                 <SelectTrigger id="investment-risk-profile">
-                                    <SelectValue placeholder="Select investment risk profile" />
+                                    <SelectValue placeholder="Select investment risk profile"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="conservative">Conservative</SelectItem>
